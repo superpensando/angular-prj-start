@@ -9,18 +9,18 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
-import { ShoppinListEditComponent } from './shopping/shopping-list/shoppin-list-edit/shoppin-list-edit.component';
+import { ShoppingListEditComponent } from './shopping/shopping-list/shopping-list-edit/shopping-list-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingListComponent,
-    ShoppinListEditComponent,
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
     HeaderComponent,
-    RecipesComponent
+    RecipesComponent,
+    ShoppingListEditComponent
   ],
   imports: [
     BrowserModule,
