@@ -11,6 +11,7 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './shopping/shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { HighlightDirective } from './shared/highlight.directive';
+import { UnLessDirective } from './shared/unless.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HighlightDirective } from './shared/highlight.directive';
     RecipesComponent,
     ShoppingListEditComponent,
     HighlightDirective,
+    UnLessDirective,
   ],
   imports: [
     BrowserModule,
