@@ -1,10 +1,13 @@
-import { Directive, Renderer2, OnInit, ElementRef, HostListener, HostBinding } from "@angular/core";
+import { Directive, Renderer2, OnInit, ElementRef, HostListener, HostBinding, Input } from "@angular/core";
 
 @Directive( {
   selector: '[appHighlight]',
 })
 
 export class HighlightDirective implements OnInit {
+
+  @Input() defaultColor: string = "transparent";
+  @Input('appHighlight') hightlightColor: string = "blue"; // --> With Alias
 
   // HostBinding to bind Host Properties or css clases (access the DOM)
 
@@ -19,12 +22,12 @@ export class HighlightDirective implements OnInit {
 
   @HostListener('mouseenter') mouseenter(eventData: Event) {
     //this.renderer.setStyle(this.elRef.nativeElement, 'background-color','#E3C0E6');
-    this.backgroundColor = '#E3C0E6';
+    this.backgroundColor = this.hightlightColor;
   }
 
   @HostListener('mouseleave') mouseleave(eventData: Event) {
     //this.renderer.setStyle(this.elRef.nativeElement, 'background-color','transparent');
-    this.backgroundColor = 'transparent';
+    this.backgroundColor =  this.defaultColor;
   }
 
 }

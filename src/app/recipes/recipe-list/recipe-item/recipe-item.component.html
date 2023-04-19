@@ -1,4 +1,4 @@
-<a appHighlight href="#" class="list-group-item clearfix"  (click)="onSelect(recipeItem)">
+<a [appHighlight]="'#E3C0E6'" href="#"  class="list-group-item clearfix"  (click)="onSelect(recipeItem)">
   <div class="pull-left">
     <h4 class="list-group-item-heading" >{{ recipeItem.name }}</h4>
     <p class="list-group-item-text">{{ recipeItem.description }}</p>
