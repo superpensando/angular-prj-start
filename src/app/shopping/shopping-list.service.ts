@@ -6,7 +6,7 @@ export class ShoppingListService {
   ingredientsChanged  = new EventEmitter<Ingredient[]>();
 
   private ingredientsList: Ingredient[] = [
-    new Ingredient('Apples',5,),
+    new Ingredient('Manzanas',5,),
     new Ingredient ('Tomates',2)
   ];
 
@@ -19,4 +19,9 @@ export class ShoppingListService {
      this.ingredientsChanged.emit(this.ingredientsList.slice());
   }
 
-}
+  addIngredientList(ingredientList: Ingredient[]) {
+    this.ingredientsList.push(...ingredientList);
+    this.ingredientsChanged.emit(this.ingredientsList.slice());
+  }
+
+ }
