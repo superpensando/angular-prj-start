@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { ShoppingListService } from './shopping/shopping-list.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -13,6 +15,7 @@ import { ShoppingListEditComponent } from './shopping/shopping-list/shopping-lis
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { UnLessDirective } from './shared/directives/unless.directive';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,7 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ShoppingListService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
